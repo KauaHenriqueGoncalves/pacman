@@ -1,4 +1,4 @@
-# HELP – Como Executar o Projeto
+# Como Executar o Projeto
 
 Este documento descreve como configurar o ambiente e executar o projeto **CapstonePacMan**, desenvolvido em **C#**, **.NET 10** e **Uno Platform**.
 
