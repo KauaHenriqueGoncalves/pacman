@@ -1,0 +1,66 @@
+﻿<Page x:Class="CapstonePacMan.Presentation.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:CapstonePacMan.Presentation"
+      NavigationCacheMode="Required"
+      Background="{ThemeResource BackgroundBrush}">
+
+    <Page.DataContext>
+        <local:MainViewModel/>
+    </Page.DataContext>
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#FF000000" Offset="0"/>
+                <GradientStop Color="#FF0A0A2A" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Border Background="#CC000000"
+                CornerRadius="24"
+                Padding="40"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Width="320">
+
+            <StackPanel Spacing="24">
+
+                <TextBlock Text="PAC-MAN"
+                           FontSize="40"
+                           FontWeight="ExtraBold"
+                           Foreground="Yellow"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,10"/>
+
+                <Button Content="Iniciar"
+                        Command="{Binding IniciarCommand}"
+                        Height="48"
+                        FontSize="16"
+                        CornerRadius="12"
+                        HorizontalAlignment="Center"/>
+
+                <Button Content="Quadro de Pontuação"
+                        Command="{Binding PontuacaoCommand}"
+                        Height="48"
+                        FontSize="16"
+                        CornerRadius="12"
+                        HorizontalAlignment="Center"/>
+
+                <Button Content="Mudo"
+                        Command="{Binding MudoCommand}"
+                        Height="48"
+                        FontSize="16"
+                        CornerRadius="12"
+                        HorizontalAlignment="Center"/>
+
+                <Button Content="Sair"
+                        Command="{Binding SairCommand}"
+                        Height="48"
+                        FontSize="16"
+                        CornerRadius="12"
+                        HorizontalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

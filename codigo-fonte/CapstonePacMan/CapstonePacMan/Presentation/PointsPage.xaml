@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="CapstonePacMan.Presentation.PointsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:presentation="clr-namespace:CapstonePacMan.Presentation">
+
+    <Page.DataContext>
+        <presentation:PointsViewModel/>
+    </Page.DataContext>
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        <TextBlock Text="Quadro de Pontuação"
+                   FontSize="28"
+                   Margin="0,0,0,20"/>
+
+        <ListView ItemsSource="{Binding Pontuacoes}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Spacing="20">
+                        <TextBlock Text="{Binding Nome}" Width="150"/>
+                        <TextBlock Text="{Binding Pontos}" Width="100"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Content="Voltar" Click="Voltar_Click"/>
+    </StackPanel>
+</Page>

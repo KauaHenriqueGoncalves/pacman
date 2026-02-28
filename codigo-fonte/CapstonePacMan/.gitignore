@@ -1,0 +1,43 @@
+# Build outputs
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+.run
+.vscode
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# NuGet
+packages/
+*.nupkg
+
+# Publish
+publish/
+
+# Uno Platform / WASM cache
+wwwroot/dist/
+
+# App secrets
+appsettings.Development.json
+
+# Resizetizer (icons generated)
+**/Assets/**/resizetizer/**

@@ -1,0 +1,61 @@
+<Project Sdk="Uno.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net10.0-desktop</TargetFrameworks>
+
+        <OutputType>Exe</OutputType>
+        <UnoSingleProject>true</UnoSingleProject>
+
+        <!-- Display name -->
+        <ApplicationTitle>CapstonePacMan</ApplicationTitle>
+        <!-- App Identifier -->
+        <ApplicationId>com.companyname.CapstonePacMan</ApplicationId>
+        <!-- Versions -->
+        <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+        <ApplicationVersion>1</ApplicationVersion>
+        <!-- Package Publisher -->
+        <ApplicationPublisher>O=CapstonePacMan</ApplicationPublisher>
+        <!-- Package Description -->
+        <Description>CapstonePacMan powered by Uno Platform.</Description>
+
+        <!--
+          UnoFeatures are used to quickly add and manage features enabled for your app.
+          https://aka.platform.uno/singleproject-features
+        -->
+        <UnoFeatures>
+            Material;
+            Dsp;
+            Hosting;
+            Toolkit;
+            Logging;
+            Mvvm;
+            Configuration;
+            HttpKiota;
+            Serialization;
+            Localization;
+            Navigation;
+            ThemeService;
+            SkiaRenderer;
+        </UnoFeatures>
+    </PropertyGroup>
+    <ItemGroup>
+      <UnoIcon Remove="Assets\Icons\icon.svg" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="LibVLCSharp" />
+      <PackageReference Include="VideoLAN.LibVLC.Windows" />
+    </ItemGroup>
+    <ItemGroup>
+        <UnoXamlResource Include="Styles\ColorPaletteOverride.xaml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="Assets\Sounds\**\*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Assets/Data/pontuacoes.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>
